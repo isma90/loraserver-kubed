@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: loraserverio
+  name: lora-gateway-bridge
+  labels:
+    component: loraserverio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: loraserverio
+  template:
+    metadata:
+      labels:
+        component: loraserverio
+    spec:
+      containers:
+        - name: lora-gateway-bridge
+          image: loraserver/lora-gateway-bridge:3
+          ports:
+            - containerPort: 1700
+              name: udp
+          volumeMounts:
+            - name: lora-gateway-bridge
+              mountPath: /etc/lora-gateway-bridge
+      volumes:
+        - name: lora-gateway-bridge
+          configMap:
+            name: lora-gateway-bridge-config
