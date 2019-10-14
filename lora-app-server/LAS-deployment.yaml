@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: loraserverio
+  name: lora-app-server
+  labels:
+    component: lora-app-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: lora-app-server
+  template:
+    metadata:
+      labels:
+        component: lora-app-server
+    spec:
+      containers:
+        - name: lora-app-server
+          image: loraserver/lora-app-server:3
+          ports:
+            - containerPort: 8080
+              name: http
+          volumeMounts:
+            - name: lora-app-server
+              mountPath: /etc/lora-app-server
+      volumes:
+        - name: lora-app-server
+          configMap:
+            name: lora-app-server-config
