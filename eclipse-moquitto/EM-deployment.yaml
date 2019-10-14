@@ -20,9 +20,7 @@ spec:
           image: eclipse-mosquitto:1.6.7
           ports:
             - containerPort: 1883
-              name: udp
-            - containerPort: 9001
-              name: udp
+              name: tcp
           volumeMounts:
             - name: eclipse-moquitto
               mountPath: /mosquitto/config
