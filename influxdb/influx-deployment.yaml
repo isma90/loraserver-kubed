@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: loraserverio
+  name: influx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: influx
+  template:
+    metadata:
+      labels:
+        component: influx
+    spec:
+      containers:
+        - name: influx
+          image: influx:1.7-alpine
+          ports:
+            - containerPort: 8086
+              name: http
+            - containerPort: 8083
+              name: admin
+          volumeMounts:
+            - mountPath: data
+              name: /var/lib/influxdb
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: influx-data

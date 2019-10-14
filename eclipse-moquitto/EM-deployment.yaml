@@ -6,7 +6,7 @@ metadata:
   labels:
     component: eclipse-moquitto
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       component: eclipse-moquitto
