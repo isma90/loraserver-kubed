@@ -22,8 +22,8 @@ spec:
             - containerPort: 8083
               name: admin
           volumeMounts:
-            - mountPath: data
-              name: /var/lib/influxdb
+            - mountPath: /var/lib/influxdb
+              name: data
       volumes:
         - name: data
           persistentVolumeClaim:

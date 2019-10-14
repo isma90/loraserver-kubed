@@ -1,3 +1,10 @@
+### Author
+
+**Ismael Leiva**
+
+* [github/isma90](https://github.com/isma90)
+* [dockerhub/ismaleiva90](https://hub.docker.com/u/ismaleiva90)
+* [stackoverflow/isma90](https://stackoverflow.com/users/2043313/isma90?tab=profile)
 
 
 ### License
@@ -9,8 +16,9 @@ Released under the [MIT License](LICENSE).
 
 Based on: 
 
-- [Docker Hub Influxdb](https://hub.docker.com/_/influxdb)
 - [Loraserver.io](https://www.loraserver.io/guides/)
 - [Docker Hub Loraserver](https://hub.docker.com/r/loraserver/loraserver)
 - [Docker Hub Lora gateway bridge](https://hub.docker.com/r/loraserver/lora-gateway-bridge)
+- [Docker Hub Influxdb](https://hub.docker.com/_/influxdb)
 - [Docker Hub Eclipse Moquito](https://hub.docker.com/_/eclipse-mosquitto)
+- [Docker Hub Postgres](https://hub.docker.com/_/postgres)
