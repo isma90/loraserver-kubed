@@ -1,3 +1,11 @@
+## Loraserver Kubed
+
+You can customize the configuration using the confimaps files.
+
+#### Easy deploy
+
+`./deploy.sh`
+
 ### Author
 
 **Ismael Leiva**
