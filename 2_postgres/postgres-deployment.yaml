@@ -28,7 +28,7 @@ spec:
               name: http
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
-              name: postgres-data
+              name: data
       volumes:
         - name: data
           persistentVolumeClaim:

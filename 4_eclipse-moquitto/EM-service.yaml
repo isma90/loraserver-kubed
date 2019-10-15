@@ -10,5 +10,5 @@ spec:
   selector:
     component: eclipse-moquitto
   ports:
-    - port: 1700
-      name: udp
+    - port: 1883
+      name: tcp

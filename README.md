@@ -14,8 +14,6 @@ Released under the [MIT License](LICENSE).
 
 ### Credits
 
-Based on: 
-
 - [Loraserver.io](https://www.loraserver.io/guides/)
 - [Docker Hub Loraserver](https://hub.docker.com/r/loraserver/loraserver)
 - [Docker Hub Lora gateway bridge](https://hub.docker.com/r/loraserver/lora-gateway-bridge)

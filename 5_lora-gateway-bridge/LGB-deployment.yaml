@@ -21,6 +21,7 @@ spec:
           ports:
             - containerPort: 1700
               name: udp
+              protocol: UDP
           volumeMounts:
             - name: lora-gateway-bridge
               mountPath: /etc/lora-gateway-bridge

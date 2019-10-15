@@ -18,9 +18,6 @@ spec:
       containers:
         - name: lora-server
           image: loraserver/lora-server:3
-          ports:
-            - containerPort: 1700
-              name: udp
           volumeMounts:
             - name: lora-server
               mountPath: /etc/loraserver

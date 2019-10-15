@@ -21,6 +21,7 @@ spec:
           ports:
             - containerPort: 1883
               name: tcp
+              protocol: TCP
           volumeMounts:
             - name: eclipse-moquitto
               mountPath: /mosquitto/config
