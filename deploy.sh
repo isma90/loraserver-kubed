@@ -1,6 +1,7 @@
 #!/bin/bash
 
 kubectl apply -f 0_general
+kubectl apply -f 0_pvc
 kubectl apply -f 1_influxdb
 kubectl apply -f 2_postgres
 kubectl apply -f 3_redis
