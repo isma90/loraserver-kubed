@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: loraserverio
+  name: eclipse-moquitto
+  labels:
+    component: eclipse-moquitto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: eclipse-moquitto
+  template:
+    metadata:
+      labels:
+        component: eclipse-moquitto
+    spec:
+      containers:
+        - name: eclipse-moquitto
+          image: eclipse-mosquitto:1.6.7
+          ports:
+            - containerPort: 1883
+              name: tcp
+              protocol: TCP
+          volumeMounts:
+            - name: config
+              mountPath: /mosquitto/config
+            - name: data
+              mountPath: /mosquitto/data
+      volumes:
+        - name: config
+          configMap:
+            name: eclipse-moquitto-config
+        - name: data
+          persistentVolumeClaim:
+            claimName: eclipse-moquito-data

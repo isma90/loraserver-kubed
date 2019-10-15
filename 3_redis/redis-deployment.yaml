@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: loraserverio
+  name: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: redis
+  template:
+    metadata:
+      labels:
+        component: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:5.0.3-alpine
+          ports:
+            - containerPort: 6379
+          resources:
+            limits:
+              memory: 2Gi
+            requests:
+              memory: 512Mi

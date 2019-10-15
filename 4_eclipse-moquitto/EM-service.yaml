@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: loraserverio
+  name: eclipse-moquitto
+  labels:
+    component: eclipse-moquitto
+spec:
+  type: ClusterIP
+  selector:
+    component: eclipse-moquitto
+  ports:
+    - port: 1883
+      name: tcp

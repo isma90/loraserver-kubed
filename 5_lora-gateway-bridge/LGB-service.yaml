@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: loraserverio
+  name: lora-gateway-bridge
+  labels:
+    component: lora-gateway-bridge
+spec:
+  type: ClusterIP
+  selector:
+    component: lora-gateway-bridge
+  ports:
+    - port: 1700
+      name: udp
