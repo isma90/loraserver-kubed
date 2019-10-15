@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: lora-server
-          image: loraserver/lora-server:3
+          image: loraserver/loraserver:3
           volumeMounts:
             - name: lora-server
               mountPath: /etc/loraserver
