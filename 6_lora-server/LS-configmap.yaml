@@ -12,7 +12,7 @@ data:
     # configuration examples.
 
     [postgresql]
-    dsn="postgres://loraserver_ns:loraserver_ns@postgresql/loraserver_ns?sslmode=disable"
+    dsn="postgres://loraserver_ns:loraserver_ns@postgres/loraserver_ns?sslmode=disable"
 
     [redis]
     url="redis://redis-cluster-ip-service:6379"
