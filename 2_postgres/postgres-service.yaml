@@ -2,12 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   namespace: loraserverio
-  name: postgres-cluster-ip-service
+  name: postgres
+  labels:
+    app: postgres
 spec:
-  type: ClusterIP
+  clusterIP: None
   selector:
     component: postgres
   ports:
     - port: 5432
-      targetPort: 5432
       name: http
