@@ -15,6 +15,10 @@ spec:
       labels:
         component: lora-gateway-bridge
     spec:
+      initContainers:
+        - name: wait-services
+          image: busybox
+          command: ['sh', '-c', 'until nslookup postgres.loraserverio.svc.cluster.local; do echo waiting service start; sleep 2; done;']
       containers:
         - name: lora-gateway-bridge
           image: loraserver/lora-gateway-bridge:3
