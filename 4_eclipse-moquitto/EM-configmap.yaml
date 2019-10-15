@@ -4,7 +4,7 @@ metadata:
   namespace: loraserverio
   name: eclipse-moquitto-config
 data:
-  mosquitto-conf: |
+  mosquitto.conf: |
     persistence true
     persistence_location /mosquitto/data/
     log_dest file /mosquitto/log/mosquitto.log

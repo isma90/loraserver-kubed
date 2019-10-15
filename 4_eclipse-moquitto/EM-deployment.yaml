@@ -23,12 +23,12 @@ spec:
               name: tcp
               protocol: TCP
           volumeMounts:
-            - name: eclipse-moquitto
+            - name: config
               mountPath: /mosquitto/config
             - name: data
               mountPath: /mosquitto/data
       volumes:
-        - name: eclipse-moquitto
+        - name: config
           configMap:
             name: eclipse-moquitto-config
         - name: data
