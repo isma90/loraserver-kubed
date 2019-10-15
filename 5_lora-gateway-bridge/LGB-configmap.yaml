@@ -9,6 +9,6 @@ data:
     # configuration example and documentation.
 
     [integration.mqtt.auth.generic]
-    server="tcp://mosquitto:1883"
+    server="tcp://eclipse-moquitto:1883"
     username=""
     password=""
