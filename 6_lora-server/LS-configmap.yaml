@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   namespace: loraserverio
-  name: lora-gateway-bridge-config
+  name: lora-server-config
 data:
   loraserver.toml: |
     # See https://www.loraserver.io/loraserver/install/config/ for a full
