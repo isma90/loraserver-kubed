@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   namespace: loraserverio
-  name: llora-app-server-config
+  name: lora-app-server-config
 data:
   lora-app-server.toml: |
     # See https://www.loraserver.io/lora-app-server/install/config/ for a full
